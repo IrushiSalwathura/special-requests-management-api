@@ -1,0 +1,12 @@
+export enum REQUEST_TYPE {
+    EVENT_APPEARANCE,
+    BIRTHDAY_GREETING,
+    TYPE1,
+    TYPE2
+}
+
+export enum STATUS {
+    ACCEPTED,
+    PENDING,
+    DECLINED
+}
