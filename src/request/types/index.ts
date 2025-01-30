@@ -1,8 +1,7 @@
 export enum REQUEST_TYPE {
     EVENT_APPEARANCE,
     BIRTHDAY_GREETING,
-    TYPE1,
-    TYPE2
+    PRODUCT_MARKETING
 }
 
 export enum STATUS {
