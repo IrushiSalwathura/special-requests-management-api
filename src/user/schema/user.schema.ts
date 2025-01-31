@@ -9,7 +9,11 @@ export class User {
     email: string;
 
     @Prop( {required: true })
-    isAdmin: boolean;
+    role: string;
+
+    @Prop( {required: true})
+    password: string;
+
 }
 
-export const RequestSchema = SchemaFactory.createForClass(User);
+export const UserSchema = SchemaFactory.createForClass(User);

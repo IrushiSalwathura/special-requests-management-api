@@ -1,18 +1,7 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import { Types } from "mongoose";
+import { REQUEST_TYPE, STATUS } from "../types";
 
-enum REQUEST_TYPE {
-    EVENT_APPEARANCE,
-    BIRTHDAY_GREETING,
-    TYPE1,
-    TYPE2
-}
-
-enum STATUS {
-    ACCEPTED,
-    PENDING,
-    DECLINED
-}
 
 @Schema({
     timestamps: true

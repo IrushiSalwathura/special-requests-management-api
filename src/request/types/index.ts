@@ -7,5 +7,6 @@ export enum REQUEST_TYPE {
 export enum STATUS {
     ACCEPTED,
     PENDING,
-    DECLINED
+    REJECTED,
+    CHANGES_REQUESTED
 }
