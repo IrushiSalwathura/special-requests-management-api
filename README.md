@@ -52,15 +52,17 @@ Ensure you have the following installed:
       * Click "Insert Document".
       * Replace the existing document with:
 ```bash      
-         {
-         "name": "John Doe",
-         "email": "john@example.com",
-         "password": "password",
-         "role": "user",
-         "createdAt": { "$date": "2025-01-31T00:00:00Z" }
-         }
+   {
+   "name": "John Doe",
+   "email": "john@example.com",
+   "password": "password",
+   "role": "user",
+   "createdAt": { "$date": "2025-01-31T00:00:00Z" }
+   }
 ```
-      * Click "Insert".
+
+   * Click "Insert".
+      
 
 ### Running the Application
 
