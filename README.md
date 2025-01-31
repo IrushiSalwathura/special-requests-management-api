@@ -1,7 +1,7 @@
 # NestJS Backend API
 
 ## Getting Started
-This guide walks you through setting up a NestJS backend API project.
+This guide walks you through setting up this NestJS backend API project.
 
 ### Prerequisites
 Ensure you have the following installed:
@@ -21,7 +21,7 @@ Ensure you have the following installed:
    npm install
 ```
 
-### Set up MongoDB locally
+### Set up MongoDB (locally)
 
    1. Open MongoDB Compass
 
