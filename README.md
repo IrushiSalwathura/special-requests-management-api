@@ -21,7 +21,7 @@ Ensure you have the following installed:
    npm install
 ```
 
-### Set up MongoDB (locally)
+### Set up MongoDB (locally) and Create a User to log into the system
 
    1. Open MongoDB Compass
 
@@ -50,7 +50,7 @@ Ensure you have the following installed:
 
       * Open the users collection.
       * Click "Insert Document".
-      * Replace the existing document with:
+      * Replace the existing document with the following and Click "Insert".
 ```bash      
    {
    "name": "John Doe",
@@ -61,7 +61,7 @@ Ensure you have the following installed:
    }
 ```
 
-   * Click "Insert".
+   5. Using the above credentials you can log in to the system.
       
 
 ### Running the Application
