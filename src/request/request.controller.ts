@@ -1,6 +1,7 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { RequestService } from './request.service';
 import { CreateRequestDTO } from './dto/create-request-dto';
+import { ReviewRequestDTO } from './dto/review-request-dto';
 
 @Controller('request')
 export class RequestController {
@@ -36,5 +37,9 @@ export class RequestController {
         return await this.requestService.deleteRequest(id);
     }
 
+    @Put('review/:id')
+    async reviewRequest(@Body() request:ReviewRequestDTO, @Param('id') id:string): Promise<Request> {
+        return await this.requestService.reviewRequest(request, id);
+    }
 
 }

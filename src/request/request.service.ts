@@ -2,6 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model, Types } from 'mongoose';
 import { CreateRequestDTO } from './dto/create-request-dto';
+import { ReviewRequestDTO } from './dto/review-request-dto';
 
 @Injectable()
 export class RequestService {
@@ -10,9 +11,14 @@ export class RequestService {
     async createRequest(request: CreateRequestDTO): Promise<Request> {
         const res = await this.requestModel.create({
             user: new Types.ObjectId(request.userId),
+            name: request.name,
+            email: request.email,
             type: request.type,
             description: request.description,
-            status: request.status || "PENDING"
+            status: request.status || "PENDING",
+            preferredDate: request.preferredDate,
+            preferredTime: request.preferredTime,
+            feedback: request.feedback,
         })
         return res;
     }
@@ -48,5 +54,16 @@ export class RequestService {
         if(res == null)
             throw new NotFoundException("Request not found, delete failed");
         return "Request Deleted Successfully";
+    }
+
+    async reviewRequest(request: ReviewRequestDTO, id:string): Promise<Request> {
+        const res = await this.requestModel.findByIdAndUpdate(id, request, {
+            new: true,
+            runValidators: true
+        });
+        console.log(res)
+        if(res == null)
+            throw new NotFoundException("Request not found, Update failed");
+        return res;
     }
 }

@@ -7,6 +7,12 @@ import { REQUEST_TYPE, STATUS } from "../types";
     timestamps: true
 })
 export class Request {
+    @Prop({ type: String, required: true })
+    name: string;
+
+    @Prop({ type: String, required: true })
+    email: string;
+
     @Prop({ type: String, enum: REQUEST_TYPE, required: true })
     type: REQUEST_TYPE;
 
@@ -21,6 +27,15 @@ export class Request {
 
     @Prop({ type: Types.ObjectId, ref: 'User', required: true })
     user: Types.ObjectId;
+
+    @Prop({ type: String, required: true })
+    preferredDate: string;
+
+    @Prop({ type: String, required: true })
+    preferredTime: string;
+
+    @Prop({ type: String })
+    feedback: string;
 }
 
 export const RequestSchema = SchemaFactory.createForClass(Request);
