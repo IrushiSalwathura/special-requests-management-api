@@ -32,10 +32,10 @@ Ensure you have the following installed:
    mongodb://localhost:27017
 ``` 
 
-   2. Create a New Database (if not already created)
+   2. Create a New Database
 
       * Click on "Create Database" in the left sidebar.
-      * Enter a Database Name (e.g., myDatabase).
+      * Enter a Database Name (e.g., requestmgtdb).
       * Add a Collection Name (e.g., users).
       * Click "Create Database".
 
