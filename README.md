@@ -71,6 +71,7 @@ npm run start
 
 ### API Documentation
 Please refer to the API documentation via below link.
+
 https://docs.google.com/document/d/1-ZLpLmFIURDlTWe6Ut7XgsGCQqyCEHR4kZGPGUYl1_s/edit?usp=sharing
 
 ### Contributing
